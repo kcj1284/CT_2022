@@ -9,7 +9,6 @@ public class bj_10814_agesort {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		String arr[][] = new String[n][2];
-
 		for (int i = 0; i < n; i++) {
 			String age = sc.next();
 			String name = sc.next();
