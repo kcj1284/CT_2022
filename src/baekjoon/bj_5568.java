@@ -3,7 +3,7 @@ package baekjoon;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class bj_5568_cardsort {
+public class bj_5568 {
 
 	static HashSet<Integer> set = new HashSet<>();
 	static int num [];

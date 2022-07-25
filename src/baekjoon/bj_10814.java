@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class bj_10814_agesort {
+public class bj_10814 {
 	public static void main(String args[]) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();

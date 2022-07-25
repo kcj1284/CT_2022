@@ -1,6 +1,6 @@
 package baekjoon;
 import java.util.Scanner;
-public class bj_2884_Clock {
+public class bj_2884 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int H = sc.nextInt();
