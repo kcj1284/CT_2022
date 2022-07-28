@@ -24,12 +24,8 @@ public class bj_1546_Buffer_practice {
             score[i] = (score[i]*100)/max;
             sum=sum+score[i];
         }
-
         bw.write(sum/n +"");
         bw.flush();
         br.close();
     }
-        
-
-
 }
