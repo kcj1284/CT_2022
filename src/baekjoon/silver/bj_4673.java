@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.silver;
 
 public class bj_4673 {
 	static boolean[] arr = new boolean[10000];
