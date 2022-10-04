@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,29 +8,29 @@ public class bj_1654 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
-		int str = 0;
-		int end = 0;
+		int n = Integer.parseInt(st.nextToken()); // 4
+		int m = Integer.parseInt(st.nextToken()); // 11
+		long str = 1;
+		long end = Integer.MAX_VALUE;
+		long mid = Integer.MAX_VALUE;
+		int count = n;
 		int[] arr = new int[n];
-		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
+			st = new StringTokenizer(br.readLine());
 			arr[i] = Integer.parseInt(st.nextToken());
-			if (end < arr[i])
-				end = arr[i];
 		}
 		while (str <= end) {
-			int mid = (str + end) / 2;
-			long sum = 0;
+			count = 0;
 			for (int i = 0; i < n; i++) {
-				if (arr[i] > mid)
-					sum = sum + arr[i] - mid;
+				count += (arr[i] / mid);
 			}
-			if (sum >= m)
+			if (count >= m) {
 				str = mid + 1;
-			else
+			} else if (count < m) {
 				end = mid - 1;
+			}
+			mid = (str + end) / 2;
 		}
-		System.out.println(end);
+		System.out.println(mid);
 	}
 }

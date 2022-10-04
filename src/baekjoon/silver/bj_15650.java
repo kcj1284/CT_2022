@@ -2,7 +2,7 @@ package baekjoon.silver;
 
 import java.util.Scanner;
 
-public class bj_15650_StringBuilder_practice {
+public class bj_15650 {
 	static int[] arr;
 	static int n, m;
 	static StringBuilder sb = new StringBuilder();
