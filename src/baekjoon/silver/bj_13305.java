@@ -28,15 +28,13 @@ public class bj_13305 {
 		}
 		gas[t - 1] = 0;
 		for (int i = 0; i < t; i++) {
-			end=i;
+			end = i;
 			if (gas[str] <= gas[i]) {
 				continue;
 			}
 			answer += (city[end] - city[str]) * gas[str];
 			str = i;
 		}
-
 		System.out.println(answer);
 	}
-
 }
