@@ -1,31 +1,23 @@
 package baekjoon.silver;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class bj_10158 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int w = sc.nextInt();
-        int h = sc.nextInt();
-        int p = sc.nextInt();
-        int q = sc.nextInt();
-        int t = sc.nextInt();
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int w = Integer.parseInt(st.nextToken());
+        int h = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        int p = Integer.parseInt(st.nextToken());
+        int q = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        int t = Integer.parseInt(st.nextToken());
         
-        int temp=0;
-
-        int x, y;
-        x = y = 1;
-
-        for(int i=0;i<t;i++){
-            if(p+x>=0&&p+x<=w&&q+y>=0&&q+y<=h){
-                p+=x;
-                q+=y;
-            }
-            else{
-                
-            }
-        }
-        
-        sc.close();
+        p = w-Math.abs(w-(t+p)%(2*w));
+        q = h-Math.abs(h-(t+q)%(2*h));
+        System.out.println(p+" "+q);
     }
 }
