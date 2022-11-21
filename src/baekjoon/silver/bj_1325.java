@@ -50,17 +50,17 @@ public class bj_1325 {
     }
 
     static void bfs(int n) {
-        int temp = 0;
         queue.add(n);
-        while (!queue.isEmpty()) {
+        int temp;
+        while(!queue.isEmpty()){
             temp = queue.poll();
-            for (int i = 0; i < num[temp].size(); i++) {
-                if (!visited[num[temp].get(i)]) {
-                    queue.add(num[temp].get(i));
-                    arr[num[temp].get(i)]++;
-                    visited[num[temp].get(i)] = true;
+            if(!visited[temp]){
+                visited[temp] = true;
+                arr[temp]++;
+                for(int i=0;i<num[temp].size();i++){
+                    if(!visited[num[temp].get(i)])
+                        queue.add(num[temp].get(i));
                 }
-
             }
         }
 
